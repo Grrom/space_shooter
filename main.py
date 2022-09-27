@@ -54,17 +54,20 @@ def turn_left():
         bullet.lt(10)
     
 def move_up():
-    bullet.setheading(90)
-    bullet.fd(30)
-    bullet.setheading(0)
+    if(bullet.state == "ready"):
+        bullet.setheading(90)
+        bullet.fd(30)
+        bullet.setheading(0)
+    
     space_ship.setheading(90)
     space_ship.fd(30)
     space_ship.setheading(0)
 
 def move_down():
-    bullet.setheading(270)
-    bullet.fd(30)
-    bullet.setheading(0)
+    if(bullet.state == "ready"):
+        bullet.setheading(270)
+        bullet.fd(30)
+        bullet.setheading(0)
     space_ship.setheading(270)
     space_ship.fd(30)
     space_ship.setheading(0)
